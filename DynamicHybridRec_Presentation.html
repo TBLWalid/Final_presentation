@@ -2485,117 +2485,255 @@ SLIDE 1b — WHAT IS A RECOMMENDATION SYSTEM?
       <!-- ══════════════════════════════════════════
 SLIDE 1c — WHY RECOMMENDATION SYSTEMS MATTER
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
-        <div class="slide">
-          <div class="grid-bg"></div>
-          <div class="slide-title-bar">
-            <div class="slide-eyebrow">Introduction</div>
-            <div class="slide-heading">Why Do They <span>Matter?</span></div>
-            <div class="title-line"></div>
+      <!-- ══════════════════════════════════════════
+SLIDE: WHY DO THEY MATTER? (ANIMATED METRICS & BACKDROP LOGOS)
+══════════════════════════════════════════ -->
+      <section data-transition="slide" class="metrics-counting-slide">
+        <div class="slide" style="position: relative; overflow: hidden;">
+          <div class="grid-bg" style="z-index: 1;"></div>
+
+          <div
+            style="position: absolute; inset: 0; z-index: 2; pointer-events: none; opacity: 0.04; filter: grayscale(100%);">
+            <span
+              style="position: absolute; top: 15%; left: 8%; font-size: 3.5em; font-weight: 900; font-family: sans-serif; color: var(--white);">amazon</span>
+            <span
+              style="position: absolute; bottom: 25%; left: 5%; font-size: 4em; font-weight: 800; font-family: sans-serif; color: var(--white); letter-spacing: -2px;">NETFLIX</span>
+            <span
+              style="position: absolute; top: 22%; right: 7%; font-size: 4.5em; font-weight: 700; font-family: sans-serif; color: var(--white); letter-spacing: -1px;">►
+              YouTube</span>
+            <span
+              style="position: absolute; bottom: 15%; right: 12%; font-size: 3.5em; font-weight: 800; font-family: sans-serif; color: var(--white);">Spotify</span>
           </div>
-          <div class="slide-body" style="flex-direction:column;gap:12px;align-items:center">
 
-            <!-- KPI stats row -->
-            <div style="display:flex;gap:12px;width:100%;max-width:860px;justify-content:center">
+          <div
+            style="position: relative; z-index: 3; display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
 
-              <div class="glass fragment zoom-in" data-fragment-index="0"
-                style="flex:1;border-radius:var(--r);border:1px solid rgba(30,144,255,.3);padding:14px;text-align:center;position:relative;overflow:hidden">
-                <div
-                  style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(30,144,255,.08),transparent 70%)">
+            <div class="slide-title-bar">
+              <div class="slide-eyebrow">Introduction</div>
+              <div class="slide-heading">Why Do They <span>Matter?</span></div>
+              <div class="title-line"></div>
+            </div>
+
+            <div class="slide-body" style="flex-direction:column; gap:16px; align-items:center;">
+
+              <div style="display:flex; gap:12px; width:100%; max-width:860px; justify-content:center"
+                class="fragment fade-up" data-fragment-index="0">
+
+                <div class="glass"
+                  style="flex:1; border-radius:var(--r); border:1px solid rgba(30,144,255,.3); padding:14px 14px 22px 14px; text-align:center; position:relative; overflow:hidden">
+                  <div
+                    style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(30,144,255,.08),transparent 70%)">
+                  </div>
+                  <div class="count-target" data-value="35" data-suffix="%"
+                    style="font-size:1.9em; font-weight:800; font-family:'Space Grotesk',sans-serif; background:linear-gradient(135deg,#fff,#4db0ff); -webkit-background-clip:text;-webkit-text-fill-color:transparent; position:relative">
+                    0%
+                  </div>
+                  <div
+                    style="font-size:.62em; color:var(--white2); margin-top:4px; position:relative; line-height:1.3;">of
+                    Amazon's revenue<br>driven by recommendations</div>
+
+                  <div
+                    style="position:absolute; bottom:6px; right:10px; font-size:0.45em; color:rgba(255,255,255,0.3); font-family:var(--font-m); letter-spacing:0.5px;">
+                    [McKinsey &amp; Co.]</div>
                 </div>
-                <div
-                  style="font-size:2em;font-weight:800;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#fff,#4db0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative">
-                  35%</div>
-                <div style="font-size:.65em;color:var(--white2);margin-top:4px;position:relative">of Amazon's
-                  revenue<br>driven by recommendations</div>
+
+                <div class="glass"
+                  style="flex:1; border-radius:var(--r); border:1px solid rgba(0,212,232,.3); padding:14px 14px 22px 14px; text-align:center; position:relative; overflow:hidden">
+                  <div
+                    style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(0,212,232,.08),transparent 70%)">
+                  </div>
+                  <div class="count-target" data-value="80" data-suffix="%"
+                    style="font-size:1.9em; font-weight:800; font-family:'Space Grotesk',sans-serif; background:linear-gradient(135deg,#fff,#00d4e8); -webkit-background-clip:text;-webkit-text-fill-color:transparent; position:relative">
+                    0%
+                  </div>
+                  <div
+                    style="font-size:.62em; color:var(--white2); margin-top:4px; position:relative; line-height:1.3;">of
+                    Netflix watch time<br>comes from recommendations</div>
+
+                  <div
+                    style="position:absolute; bottom:6px; right:10px; font-size:0.45em; color:rgba(255,255,255,0.3); font-family:var(--font-m); letter-spacing:0.5px;">
+                    [Gomez-Uribe &amp; Hunt, ACM]</div>
+                </div>
+
+                <div class="glass"
+                  style="flex:1; border-radius:var(--r); border:1px solid rgba(251,191,36,.3); padding:14px 14px 22px 14px; text-align:center; position:relative; overflow:hidden">
+                  <div
+                    style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(251,191,36,.08),transparent 70%)">
+                  </div>
+                  <div class="count-target" data-value="60" data-suffix="%"
+                    style="font-size:1.9em; font-weight:800; font-family:'Space Grotesk',sans-serif; background:linear-gradient(135deg,#fff,#fbbf24); -webkit-background-clip:text;-webkit-text-fill-color:transparent; position:relative">
+                    0%
+                  </div>
+                  <div
+                    style="font-size:.62em; color:var(--white2); margin-top:4px; position:relative; line-height:1.3;">of
+                    YouTube clicks<br>originate from homepage recs</div>
+
+                  <div
+                    style="position:absolute; bottom:6px; right:10px; font-size:0.45em; color:rgba(255,255,255,0.3); font-family:var(--font-m); letter-spacing:0.5px;">
+                    [Davidson et al., RecSys]</div>
+                </div>
+
+                <div class="glass"
+                  style="flex:1; border-radius:var(--r); border:1px solid rgba(52,211,153,.3); padding:14px 14px 22px 14px; text-align:center; position:relative; overflow:hidden">
+                  <div
+                    style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(52,211,153,.08),transparent 70%)">
+                  </div>
+                  <div class="count-target" data-value="100" data-prefix="$" data-suffix="B+"
+                    data-display-override="$1T+"
+                    style="font-size:1.9em; font-weight:800; font-family:'Space Grotesk',sans-serif; background:linear-gradient(135deg,#fff,#34d399); -webkit-background-clip:text;-webkit-text-fill-color:transparent; position:relative">
+                    $0B+
+                  </div>
+                  <div
+                    style="font-size:.62em; color:var(--white2); margin-top:4px; position:relative; line-height:1.3;">
+                    annual value generated<br>by recommenders globally</div>
+
+                  <div
+                    style="position:absolute; bottom:6px; right:10px; font-size:0.45em; color:rgba(255,255,255,0.3); font-family:var(--font-m); letter-spacing:0.5px;">
+                    [McKinsey Global Institute]</div>
+                </div>
+
               </div>
 
-              <div class="glass fragment zoom-in" data-fragment-index="1"
-                style="flex:1;border-radius:var(--r);border:1px solid rgba(0,212,232,.3);padding:14px;text-align:center;position:relative;overflow:hidden">
-                <div
-                  style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(0,212,232,.08),transparent 70%)">
-                </div>
-                <div
-                  style="font-size:2em;font-weight:800;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#fff,#00d4e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative">
-                  80%</div>
-                <div style="font-size:.65em;color:var(--white2);margin-top:4px;position:relative">of Netflix watch
-                  time<br>comes from recommendations</div>
-              </div>
 
-              <div class="glass fragment zoom-in" data-fragment-index="2"
-                style="flex:1;border-radius:var(--r);border:1px solid rgba(251,191,36,.3);padding:14px;text-align:center;position:relative;overflow:hidden">
-                <div
-                  style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(251,191,36,.08),transparent 70%)">
-                </div>
-                <div
-                  style="font-size:2em;font-weight:800;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#fff,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative">
-                  60%</div>
-                <div style="font-size:.65em;color:var(--white2);margin-top:4px;position:relative">of YouTube
-                  clicks<br>originate from the homepage rec</div>
-              </div>
 
-              <div class="glass fragment zoom-in" data-fragment-index="3"
-                style="flex:1;border-radius:var(--r);border:1px solid rgba(52,211,153,.3);padding:14px;text-align:center;position:relative;overflow:hidden">
-                <div
-                  style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(52,211,153,.08),transparent 70%)">
-                </div>
-                <div
-                  style="font-size:2em;font-weight:800;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#fff,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative">
-                  $1T+</div>
-                <div style="font-size:.65em;color:var(--white2);margin-top:4px;position:relative">annual value
-                  generated<br>by recommender systems globally</div>
+              <div class="glass fragment fade-up" data-fragment-index="2"
+                style="width:100%; max-width:860px; padding:10px 18px; border-radius:8px; border:1px solid rgba(0,212,232,.2); font-size:.7em; color:var(--sky); text-align:center; line-height:1.4">
+                💡 Without recommendation systems, users face <strong style="color:var(--white)">information
+                  overload</strong> — the inability to find relevant content among billions of choices leads directly to
+                lost engagement.
               </div>
 
             </div>
-
-            <!-- Impact domains -->
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;max-width:860px">
-
-              <div class="glass fragment fade-up" data-fragment-index="4"
-                style="border-radius:var(--r);border:1px solid rgba(56,189,248,.15);padding:12px;text-align:center">
-                <div style="font-size:1.4em;margin-bottom:6px">🎬</div>
-                <div style="font-size:.7em;font-weight:700;color:var(--white);margin-bottom:4px">Entertainment</div>
-                <div style="font-size:.62em;color:var(--white2);line-height:1.4">Netflix · Spotify · YouTube surface the
-                  right content instantly</div>
-              </div>
-
-              <div class="glass fragment fade-up" data-fragment-index="5"
-                style="border-radius:var(--r);border:1px solid rgba(56,189,248,.15);padding:12px;text-align:center">
-                <div style="font-size:1.4em;margin-bottom:6px">🛒</div>
-                <div style="font-size:.7em;font-weight:700;color:var(--white);margin-bottom:4px">E-Commerce</div>
-                <div style="font-size:.62em;color:var(--white2);line-height:1.4">Amazon · Alibaba boost conversion rates
-                  via personalised product feeds</div>
-              </div>
-
-              <div class="glass fragment fade-up" data-fragment-index="6"
-                style="border-radius:var(--r);border:1px solid rgba(56,189,248,.15);padding:12px;text-align:center">
-                <div style="font-size:1.4em;margin-bottom:6px">📚</div>
-                <div style="font-size:.7em;font-weight:700;color:var(--white);margin-bottom:4px">Education</div>
-                <div style="font-size:.62em;color:var(--white2);line-height:1.4">Coursera · Khan Academy guide learners
-                  to the most relevant courses</div>
-              </div>
-
-              <div class="glass fragment fade-up" data-fragment-index="7"
-                style="border-radius:var(--r);border:1px solid rgba(56,189,248,.15);padding:12px;text-align:center">
-                <div style="font-size:1.4em;margin-bottom:6px">🏥</div>
-                <div style="font-size:.7em;font-weight:700;color:var(--white);margin-bottom:4px">Healthcare</div>
-                <div style="font-size:.62em;color:var(--white2);line-height:1.4">Personalised treatment plans and
-                  clinical decision support systems</div>
-              </div>
-
-            </div>
-
-            <!-- Bottom note -->
-            <div class="glass fragment fade-up" data-fragment-index="8"
-              style="width:100%;max-width:860px;padding:10px 18px;border-radius:8px;border:1px solid rgba(0,212,232,.2);font-size:.74em;color:var(--sky);text-align:center;line-height:1.5">
-              💡 Without recommendation systems, users face <strong style="color:var(--white)">information
-                overload</strong> —
-              the inability to find relevant content among billions of options leads to disengagement and lost value
-            </div>
-
           </div>
         </div>
       </section>
+
+      <script>
+        (function () {
+          function animateNumbers(container) {
+            const targets = container.querySelectorAll('.count-target');
+            targets.forEach(target => {
+              if (target.classList.contains('is-animating')) return;
+              target.classList.add('is-animating');
+
+              const finalVal = parseInt(target.getAttribute('data-value'), 10);
+              const prefix = target.getAttribute('data-prefix') || '';
+              const suffix = target.getAttribute('data-suffix') || '';
+              const override = target.getAttribute('data-display-override');
+
+              const duration = 1400; // Easing duration
+              const startTime = performance.now();
+
+              function updateStep(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+
+                // Smooth Exponential Ease Out
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                const currentVal = Math.floor(easeProgress * finalVal);
+
+                if (override && progress === 1) {
+                  target.innerText = override;
+                } else {
+                  target.innerText = `${prefix}${currentVal}${suffix}`;
+                }
+
+                if (progress < 1) {
+                  requestAnimationFrame(updateStep);
+                } else {
+                  target.classList.remove('is-animating');
+                }
+              }
+              requestAnimationFrame(updateStep);
+            });
+          }
+
+          function checkAndAnimate(element) {
+            if (!element) return;
+            // If the target container contains counter targets and is currently visible
+            if (element.querySelector('.count-target') && (!element.classList.contains('fragment') || element.classList.contains('visible'))) {
+              animateNumbers(element);
+            }
+          }
+
+          function resetNumbers(slide) {
+            if (!slide) return;
+            slide.querySelectorAll('.count-target').forEach(target => {
+              const prefix = target.getAttribute('data-prefix') || '';
+              const suffix = target.getAttribute('data-suffix') || '';
+              target.innerText = prefix + "0" + (target.getAttribute('data-display-override') ? "B+" : suffix);
+              target.classList.remove('is-animating');
+            });
+          }
+
+          document.addEventListener("DOMContentLoaded", () => {
+            if (!window.Reveal) return;
+
+            // Event 1: Trigger if the fragment containing the metrics is revealed
+            Reveal.on('fragmentshown', event => {
+              checkAndAnimate(event.fragment);
+            });
+
+            // Event 2: Reset if user hides fragments navigating backwards
+            Reveal.on('fragmenthidden', event => {
+              if (event.fragment.querySelector('.count-target')) {
+                resetNumbers(Reveal.getCurrentSlide());
+              }
+            });
+
+            // Event 3: Reset when changing slides entirely to clear values
+            Reveal.on('slidechanged', event => {
+              resetNumbers(event.previousSlide);
+              // If the metrics container is NOT a fragment or already visible
+              checkAndAnimate(event.currentSlide);
+            });
+          });
+        })();
+      </script>
+
+      <!-- Include this engine script layer before closing body tag -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          if (window.Reveal) {
+            Reveal.on('slidechanged', event => {
+              const isTargetSlide = event.currentSlide.classList.contains('metrics-counting-slide');
+              if (isTargetSlide) {
+                setTimeout(() => {
+                  animateNumbers(event.currentSlide);
+                }, 200);
+              }
+            });
+          }
+
+          function animateNumbers(slide) {
+            const targets = slide.querySelectorAll('.count-target');
+            targets.forEach(target => {
+              const finalVal = parseInt(target.getAttribute('data-value'), 10);
+              const prefix = target.getAttribute('data-prefix') || '';
+              const suffix = target.getAttribute('data-suffix') || '';
+              let startVal = 0;
+              const duration = 1200; // Animation running duration in ms
+              const startTime = performance.now();
+
+              function updateStep(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+
+                // Smooth out animation easing curve
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                const currentVal = Math.floor(easeProgress * finalVal);
+
+                target.innerText = `${prefix}${currentVal}${suffix}`;
+
+                if (progress < 1) {
+                  requestAnimationFrame(updateStep);
+                }
+              }
+              requestAnimationFrame(updateStep);
+            });
+          }
+        });
+      </script>
 
 
 
@@ -2648,7 +2786,7 @@ SLIDE 1c — WHY RECOMMENDATION SYSTEMS MATTER
       <!-- ══════════════════════════════════════════
   SLIDE 4 — RESEARCH MOTIVATION
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
+      <!-- <section data-transition="slide">
         <div class="slide">
           <div class="grid-bg"></div>
           <div class="slide-title-bar">
@@ -2715,7 +2853,7 @@ SLIDE 1c — WHY RECOMMENDATION SYSTEMS MATTER
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- ══════════════════════════════════════════
   SLIDE 5 — RESEARCH OBJECTIVE
@@ -2744,23 +2882,75 @@ SLIDE 1c — WHY RECOMMENDATION SYSTEMS MATTER
                 <span class="tag tag-green">GradientSHAP</span>
               </div>
             </div>
-            <div style="display:flex;gap:12px;width:100%;max-width:720px">
-              <div class="glass fragment fade-up"
-                style="flex:1;padding:12px;border-radius:var(--r);border:1px solid rgba(56,189,248,.15);font-size:.74em;color:var(--white2);line-height:1.5">
-                <strong class="color-sky">Hypothesis:</strong> Integrating graph-based collaborative signals with
-                temporal sequential modeling and a persistent memory bank will outperform single-paradigm models on
-                HR@10 and NDCG@10
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+  SLIDE 15 — DATASET
+══════════════════════════════════════════ -->
+      <section data-transition="slide">
+        <div class="slide">
+          <div class="grid-bg"></div>
+          <div class="slide-title-bar">
+            <div class="slide-eyebrow">Data</div>
+            <div class="slide-heading">Dataset <span>Description</span></div>
+            <div class="title-line"></div>
+          </div>
+          <div class="slide-body">
+            <div class="dataset-layout" style="max-width:820px">
+              <div class="dataset-card glass">
+                <div class="dataset-name">📽 MovieLens 1M</div>
+                <div class="dataset-stats">
+                  <div class="ds-stat"><span class="ds-stat-label">Total Users</span><span
+                      class="ds-stat-value">6,040</span></div>
+                  <div class="ds-stat"><span class="ds-stat-label">Total Movies</span><span
+                      class="ds-stat-value">3,706</span></div>
+                  <div class="ds-stat"><span class="ds-stat-label">Total Ratings</span><span
+                      class="ds-stat-value">1,000,209</span></div>
+                  <div class="ds-stat"><span class="ds-stat-label">Rating Scale</span><span class="ds-stat-value">1 – 5
+                      stars</span></div>
+                  <div class="ds-stat"><span class="ds-stat-label">Sparsity</span><span class="ds-stat-value"
+                      style="color:var(--gold)">≈ 95.5%</span></div>
+                  <div class="ds-stat"><span class="ds-stat-label">Time Period</span><span class="ds-stat-value">2000 –
+                      2003</span></div>
+                </div>
+                <div class="dataset-bar-wrap">
+                  <div class="dataset-bar" style="width:4.5%"></div>
+                </div>
+                <div
+                  style="font-size:.6em;color:rgba(180,210,255,.5);text-align:right;margin-top:3px;font-family:var(--font-m)">
+                  density: 4.5%</div>
               </div>
-              <div class="glass fragment fade-up"
-                style="flex:1;padding:12px;border-radius:var(--r);border:1px solid rgba(56,189,248,.15);font-size:.74em;color:var(--white2);line-height:1.5">
-                <strong class="color-sky">Scope:</strong> MovieLens-1M benchmark · PyTorch implementation · React web
-                deployment · GradientSHAP explainability evaluation
+              <div style="flex:1.5;display:flex;flex-direction:column;gap:10px">
+                <div class="glass" style="border-radius:var(--r);padding:14px;border:1px solid rgba(56,189,248,.15)">
+                  <div
+                    style="font-size:.65em;color:var(--sky);font-family:var(--font-m);letter-spacing:2px;margin-bottom:8px">
+                    PREPROCESSING</div>
+                  <div class="setup-item fragment fade-left" data-fragment-index="0"><i
+                      class="fa fa-check-circle"></i><span><strong>Binarization:</strong> ratings ≥ 4 treated as
+                      positive implicit feedback</span></div>
+                  <div class="setup-item fragment fade-left" data-fragment-index="1"><i
+                      class="fa fa-check-circle"></i><span><strong>Split:</strong> leave-one-out — last item for test,
+                      second-to-last for validation</span></div>
+                  <div class="setup-item fragment fade-left" data-fragment-index="2"><i
+                      class="fa fa-check-circle"></i><span><strong>Negative Sampling:</strong> 99 random negatives per
+                      positive test interaction</span></div>
+                  <div class="setup-item fragment fade-left" data-fragment-index="3"><i
+                      class="fa fa-check-circle"></i><span><strong>Min. interactions:</strong> users with &lt;5 ratings
+                      filtered out</span></div>
+                </div>
+                <div class="glass fragment fade-up" data-fragment-index="4"
+                  style="border-radius:var(--r);padding:12px;border:1px solid rgba(56,189,248,.15);font-size:.72em;color:var(--sky);line-height:1.5">
+                  💡 MovieLens-1M is the standard benchmark for recommender systems evaluation — used by LightGCN,
+                  SASRec, BERT4Rec, and SimGCL for direct comparison
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <!-- ══════════════════════════════════════════
   SLIDE 6 — CONTRIBUTIONS
 ══════════════════════════════════════════ -->
@@ -2819,7 +3009,7 @@ SLIDE 1c — WHY RECOMMENDATION SYSTEMS MATTER
       <!-- ══════════════════════════════════════════
   SLIDE 7 — LITERATURE REVIEW
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
+      <!-- <section data-transition="slide">
         <div class="slide">
           <div class="grid-bg"></div>
           <div class="slide-title-bar">
@@ -2919,7 +3109,7 @@ SLIDE 1c — WHY RECOMMENDATION SYSTEMS MATTER
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- ══════════════════════════════════════════
 SLIDE 8 — OVERALL ARCHITECTURE
@@ -3764,216 +3954,326 @@ SLIDE 15c — ATTENTION WEIGHTS
 
 
       <!-- ══════════════════════════════════════════
-SLIDE 15d — COMPONENT ATTRIBUTION
+SLIDE: COMPONENT ATTRIBUTION ANALYSIS (HIGH-FIDELITY DONUT CHARTS)
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
+      <section data-transition="slide" class="academic-chart-slide present">
         <div class="slide">
           <div class="grid-bg"></div>
+
+          <!-- Header Block -->
           <div class="slide-title-bar">
             <div class="slide-eyebrow">Explainability · Method 3</div>
             <div class="slide-heading">Component <span>Attribution Analysis</span></div>
             <div class="title-line"></div>
           </div>
-          <div class="slide-body" style="flex-direction:column;gap:12px;align-items:center">
 
-            <div style="display:flex;gap:14px;width:100%;max-width:880px;align-items:flex-start">
+          <!-- Main Content Grid -->
+          <div class="slide-body"
+            style="display:flex; flex-direction:row; gap:24px; align-items:stretch; justify-content:space-between; width:100%; max-width:960px; margin:0 auto;">
 
-              <!-- LEFT -->
-              <div style="flex:1;display:flex;flex-direction:column;gap:8px">
-                <div class="glass" style="border-radius:var(--r);border:1px solid rgba(56,189,248,.18);padding:14px">
-                  <div
-                    style="font-size:.62em;font-family:var(--font-m);letter-spacing:2px;color:var(--cyan);margin-bottom:8px">
-                    WHAT IS IT?</div>
-                  <div style="font-size:.74em;color:var(--white2);line-height:1.6">
-                    Beyond feature-level attribution, we decompose each prediction into <strong
-                      style="color:var(--white)">per-module contributions</strong> — quantifying how much of the final
-                    score comes from the <strong style="color:var(--blue-lt)">Graph</strong>, <strong
-                      style="color:var(--cyan)">Sequential</strong>, and <strong
-                      style="color:var(--gold)">Memory</strong> branches via the dynamic gate weights.
-                  </div>
-                </div>
+            <!-- LEFT COLUMN: Theoretical Breakdown & Equations -->
+            <div style="flex:1; display:flex; flex-direction:column; gap:12px;">
 
-                <div class="glass" style="border-radius:var(--r);border:1px solid rgba(56,189,248,.18);padding:14px">
-                  <div
-                    style="font-size:.62em;font-family:var(--font-m);letter-spacing:2px;color:var(--cyan);margin-bottom:8px">
-                    DERIVATION FROM GATING</div>
-                  <div class="module-step" style="margin-bottom:7px">
-                    <div class="module-step-num" style="font-size:1em">①</div>
-                    <div class="module-step-text" style="font-size:.72em"><strong>Extract gate vector</strong> g = σ(W_g
-                      · [e_graph ∥ e_seq ∥ e_mem]) after forward pass</div>
-                  </div>
-                  <div class="module-step" style="margin-bottom:7px">
-                    <div class="module-step-num" style="font-size:1em">②</div>
-                    <div class="module-step-text" style="font-size:.72em"><strong>Normalize gates</strong> — convert raw
-                      gate values to percentages: gᵢ% = gᵢ / Σ gⱼ</div>
-                  </div>
-                  <div class="module-step">
-                    <div class="module-step-num" style="font-size:1em">③</div>
-                    <div class="module-step-text" style="font-size:.72em"><strong>Per-prediction breakdown</strong> —
-                      every recommendation gets its own graph/seq/memory split shown in the UI</div>
-                  </div>
-                </div>
-
-                <div class="module-formula" style="font-size:.7em;padding:10px 14px;line-height:1.8">
-                  z_final = g₁·e_graph + g₂·e_seq + g₃·e_mem<br>
-                  contrib% = [g₁, g₂, g₃] / (g₁+g₂+g₃) × 100
-                </div>
-              </div>
-
-              <!-- RIGHT: 3 user profiles -->
-              <div style="flex:1;display:flex;flex-direction:column;gap:8px">
-                <div class="glass" style="border-radius:var(--r);border:1px solid rgba(56,189,248,.18);padding:14px">
-                  <div
-                    style="font-size:.62em;font-family:var(--font-m);letter-spacing:2px;color:var(--cyan);margin-bottom:10px">
-                    COMPONENT SPLIT — 3 USER PROFILES</div>
-
-                  <!-- User A: heavy rater -->
-                  <div style="margin-bottom:10px">
-                    <div style="font-size:.65em;color:var(--white);margin-bottom:5px;font-weight:600">User A — 500+
-                      ratings (heavy rater)</div>
-                    <div style="display:flex;height:16px;border-radius:4px;overflow:hidden;gap:1px">
-                      <div
-                        style="width:68%;background:linear-gradient(90deg,#1e90ff,#4db0ff);display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Graph 68%</div>
-                      <div
-                        style="width:21%;background:linear-gradient(90deg,#00d4e8,rgba(0,212,232,.6));display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Seq 21%</div>
-                      <div
-                        style="width:11%;background:linear-gradient(90deg,#fbbf24,rgba(251,191,36,.6));display:flex;align-items:center;justify-content:center;font-size:.55em;color:#fff;font-family:monospace">
-                        M</div>
-                    </div>
-                  </div>
-
-                  <!-- User B: new user -->
-                  <div style="margin-bottom:10px">
-                    <div style="font-size:.65em;color:var(--white);margin-bottom:5px;font-weight:600">User B — 8 ratings
-                      (new user)</div>
-                    <div style="display:flex;height:16px;border-radius:4px;overflow:hidden;gap:1px">
-                      <div
-                        style="width:22%;background:linear-gradient(90deg,#1e90ff,#4db0ff);display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Graph 22%</div>
-                      <div
-                        style="width:35%;background:linear-gradient(90deg,#00d4e8,rgba(0,212,232,.6));display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Seq 35%</div>
-                      <div
-                        style="width:43%;background:linear-gradient(90deg,#fbbf24,rgba(251,191,36,.6));display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Memory 43%</div>
-                    </div>
-                  </div>
-
-                  <!-- User C: returning user -->
-                  <div>
-                    <div style="font-size:.65em;color:var(--white);margin-bottom:5px;font-weight:600">User C — 120
-                      ratings, long gap (returning)</div>
-                    <div style="display:flex;height:16px;border-radius:4px;overflow:hidden;gap:1px">
-                      <div
-                        style="width:38%;background:linear-gradient(90deg,#1e90ff,#4db0ff);display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Graph 38%</div>
-                      <div
-                        style="width:19%;background:linear-gradient(90deg,#00d4e8,rgba(0,212,232,.6));display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Seq 19%</div>
-                      <div
-                        style="width:43%;background:linear-gradient(90deg,#fbbf24,rgba(251,191,36,.6));display:flex;align-items:center;justify-content:center;font-size:.58em;color:#fff;font-family:monospace">
-                        Memory 43%</div>
-                    </div>
-                  </div>
-
-                  <div style="font-size:.6em;color:rgba(180,210,255,.5);margin-top:10px;line-height:1.5">
-                    → Gate weights adapt automatically: heavy raters rely on graph signals; new/returning users rely
-                    more on memory
-                  </div>
-                </div>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                  <div class="glass"
-                    style="border-radius:var(--r);border:1px solid rgba(30,144,255,.25);padding:10px 12px;text-align:center">
-                    <div style="font-size:.62em;color:var(--sky);font-family:var(--font-m);margin-bottom:4px">AVG GRAPH
-                      CONTRIB</div>
-                    <div style="font-family:var(--font-h);font-size:1.6em;font-weight:700;color:#4db0ff">54%</div>
-                  </div>
-                  <div class="glass"
-                    style="border-radius:var(--r);border:1px solid rgba(251,191,36,.25);padding:10px 12px;text-align:center">
-                    <div style="font-size:.62em;color:var(--gold);font-family:var(--font-m);margin-bottom:4px">AVG
-                      MEMORY CONTRIB</div>
-                    <div style="font-family:var(--font-h);font-size:1.6em;font-weight:700;color:#fbbf24">28%</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
-      <!-- ══════════════════════════════════════════
-  SLIDE 15 — DATASET
-══════════════════════════════════════════ -->
-      <section data-transition="slide">
-        <div class="slide">
-          <div class="grid-bg"></div>
-          <div class="slide-title-bar">
-            <div class="slide-eyebrow">Data</div>
-            <div class="slide-heading">Dataset <span>Description</span></div>
-            <div class="title-line"></div>
-          </div>
-          <div class="slide-body">
-            <div class="dataset-layout" style="max-width:820px">
-              <div class="dataset-card glass">
-                <div class="dataset-name">📽 MovieLens 1M</div>
-                <div class="dataset-stats">
-                  <div class="ds-stat"><span class="ds-stat-label">Total Users</span><span
-                      class="ds-stat-value">6,040</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Total Movies</span><span
-                      class="ds-stat-value">3,706</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Total Ratings</span><span
-                      class="ds-stat-value">1,000,209</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Rating Scale</span><span class="ds-stat-value">1 – 5
-                      stars</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Sparsity</span><span class="ds-stat-value"
-                      style="color:var(--gold)">≈ 95.5%</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Time Period</span><span class="ds-stat-value">2000 –
-                      2003</span></div>
-                </div>
-                <div class="dataset-bar-wrap">
-                  <div class="dataset-bar" style="width:4.5%"></div>
-                </div>
+              <!-- Context Card -->
+              <div class="glass"
+                style="border-radius:var(--r); border:1px solid rgba(56,189,248,.16); padding:16px; background:rgba(10,25,50,0.35);">
                 <div
-                  style="font-size:.6em;color:rgba(180,210,255,.5);text-align:right;margin-top:3px;font-family:var(--font-m)">
-                  density: 4.5%</div>
+                  style="font-size:.62em; font-family:var(--font-m); letter-spacing:2px; color:var(--cyan); margin-bottom:10px">
+                  METHODOLOGY OVERVIEW
+                </div>
+                <div style="font-size:.74em; color:var(--white2); line-height:1.6; text-align:left;">
+                  Beyond feature-level attribution, we decompose each recommendation into <strong
+                    style="color:var(--white)">per-module contributions</strong> — quantifying how much of the final
+                  score comes from the <strong style="color:var(--blue-lt)">Graph</strong>, <strong
+                    style="color:var(--cyan)">Sequential</strong>, and <strong style="color:var(--gold)">Memory</strong>
+                  branches via dynamic gating.
+                </div>
               </div>
-              <div style="flex:1.5;display:flex;flex-direction:column;gap:10px">
-                <div class="glass" style="border-radius:var(--r);padding:14px;border:1px solid rgba(56,189,248,.15)">
-                  <div
-                    style="font-size:.65em;color:var(--sky);font-family:var(--font-m);letter-spacing:2px;margin-bottom:8px">
-                    PREPROCESSING</div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="0"><i
-                      class="fa fa-check-circle"></i><span><strong>Binarization:</strong> ratings ≥ 4 treated as
-                      positive implicit feedback</span></div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="1"><i
-                      class="fa fa-check-circle"></i><span><strong>Split:</strong> leave-one-out — last item for test,
-                      second-to-last for validation</span></div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="2"><i
-                      class="fa fa-check-circle"></i><span><strong>Negative Sampling:</strong> 99 random negatives per
-                      positive test interaction</span></div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="3"><i
-                      class="fa fa-check-circle"></i><span><strong>Min. interactions:</strong> users with &lt;5 ratings
-                      filtered out</span></div>
+
+              <!-- Derivation Workflow Card -->
+              <div class="glass"
+                style="border-radius:var(--r); border:1px solid rgba(56,189,248,.16); padding:16px; background:rgba(10,25,50,0.35);">
+                <div
+                  style="font-size:.62em; font-family:var(--font-m); letter-spacing:2px; color:var(--cyan); margin-bottom:10px">
+                  LATENT DERIVATION PIPELINE
                 </div>
-                <div class="glass fragment fade-up" data-fragment-index="4"
-                  style="border-radius:var(--r);padding:12px;border:1px solid rgba(56,189,248,.15);font-size:.72em;color:var(--sky);line-height:1.5">
-                  💡 MovieLens-1M is the standard benchmark for recommender systems evaluation — used by LightGCN,
-                  SASRec, BERT4Rec, and SimGCL for direct comparison
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                  <div style="display:flex; align-items:flex-start; gap:10px;">
+                    <div
+                      style="font-size:.8em; color:var(--cyan); font-weight:bold; font-family:monospace; margin-top:-2px;">
+                      01</div>
+                    <div style="font-size:.7em; color:var(--white2); line-height:1.4;"><strong>Extract Gate
+                        Vector:</strong> $g = \sigma(W_g \cdot [e_{\text{graph}} \parallel e_{\text{seq}} \parallel
+                      e_{\text{mem}}])$ evaluated instantly during forward loop passes.</div>
+                  </div>
+                  <div style="display:flex; align-items:flex-start; gap:10px;">
+                    <div
+                      style="font-size:.8em; color:var(--cyan); font-weight:bold; font-family:monospace; margin-top:-2px;">
+                      02</div>
+                    <div style="font-size:.7em; color:var(--white2); line-height:1.4;"><strong>Softmax
+                        Normalization:</strong> Raw output logs scale natively to percentages using continuous relative
+                      distributions: $g_i\% = \frac{g_i}{\sum g_j}$.</div>
+                  </div>
+                  <div style="display:flex; align-items:flex-start; gap:10px;">
+                    <div
+                      style="font-size:.8em; color:var(--cyan); font-weight:bold; font-family:monospace; margin-top:-2px;">
+                      03</div>
+                    <div style="font-size:.7em; color:var(--white2); line-height:1.4;"><strong>Per-Item
+                        Breakdown:</strong> Every user prediction surfaces individual routing vectors down to inference
+                      layers.</div>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Formula Card -->
+              <div
+                style="font-size:.65em; padding:12px 16px; line-height:1.8; background:linear-gradient(90deg, rgba(13,27,58,0.7), rgba(8,16,36,0.4)); border-radius:var(--r); border:1px solid rgba(255,255,255,0.05); font-family:monospace; color:rgba(255,255,255,0.85); text-align:left;">
+                $z_{\text{final}} = g_1 \cdot e_{\text{graph}} + g_2 \cdot e_{\text{seq}} + g_3 \cdot
+                e_{\text{mem}}$<br>
+                $\text{contrib}\% = [g_1, g_2, g_3] \mathbin{/} (g_1 + g_2 + g_3) \times 100$
               </div>
             </div>
+
+            <!-- RIGHT COLUMN: Enterprise-Grade Donut Charts Panel -->
+            <div style="flex:1.2; display:flex; flex-direction:column; gap:12px;">
+
+              <!-- Main Panel Container -->
+              <div class="glass"
+                style="border-radius:var(--r); border:1px solid rgba(56,189,248,.18); padding:18px; display:flex; flex-direction:column; justify-content:space-between; background:rgba(6,14,32,0.6); box-shadow:0 20px 40px rgba(0,0,0,0.45);">
+
+                <!-- Section Title & Global Legend -->
+                <div
+                  style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:12px; margin-bottom:16px;">
+                  <div
+                    style="font-size:.62em; font-family:var(--font-m); letter-spacing:1.5px; color:var(--cyan); font-weight:600;">
+                    EMPIRICAL ROUTING MATRIX
+                  </div>
+
+                  <!-- Professional Mini Legend -->
+                  <div
+                    style="display:flex; gap:12px; font-size:0.52em; font-family:var(--font-m); color:var(--white2); letter-spacing:0.5px;">
+                    <span style="display:flex; align-items:center; gap:5px;"><span
+                        style="width:7px; height:7px; background:#1e90ff; border-radius:2px; box-shadow:0 0 6px rgba(30,144,255,0.4)"></span>Graph</span>
+                    <span style="display:flex; align-items:center; gap:5px;"><span
+                        style="width:7px; height:7px; background:#00d4e8; border-radius:2px; box-shadow:0 0 6px rgba(0,212,232,0.4)"></span>Sequential</span>
+                    <span style="display:flex; align-items:center; gap:5px;"><span
+                        style="width:7px; height:7px; background:#fbbf24; border-radius:2px; box-shadow:0 0 6px rgba(251,191,36,0.4)"></span>Memory</span>
+                  </div>
+                </div>
+
+                <!-- Profile Rows Stack -->
+                <div style="display:flex; flex-direction:column; gap:18px; flex-grow:1; justify-content:center;">
+
+                  <!-- Archetype A: Graph 68%, Seq 21%, Mem 11% -->
+                  <div style="display:flex; align-items:center; gap:20px;" class="archetype-row">
+                    <div class="donut-container" style="position:relative; width:80px; height:80px; flex-shrink:0;">
+                      <svg viewBox="0 0 80 80" style="transform: rotate(-90deg); width:100%; height:100%;">
+                        <circle cx="40" cy="40" r="30" fill="transparent" stroke="rgba(255,255,255,0.06)"
+                          stroke-width="7" />
+                        <!-- Graph (68%) drawn first = bottom layer -->
+                        <circle id="a-graph" cx="40" cy="40" r="30" fill="transparent" stroke="#1e90ff" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                        <!-- Seq (21%) drawn second -->
+                        <circle id="a-seq" cx="40" cy="40" r="30" fill="transparent" stroke="#00d4e8" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                        <!-- Mem (11%) drawn last = top layer -->
+                        <circle id="a-mem" cx="40" cy="40" r="30" fill="transparent" stroke="#fbbf24" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                      </svg>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px; text-align:left;">
+                      <div style="font-size:.72em; color:var(--white); font-weight:600; letter-spacing:0.3px;">User
+                        Archetype I <span
+                          style="font-size:0.85em; color:var(--blue-lt); background:rgba(30,144,255,0.1); padding:1px 6px; border-radius:3px; margin-left:6px; border:1px solid rgba(30,144,255,0.2);">Power
+                          Consumer</span></div>
+                      <div style="font-size:.58em; color:var(--white2); font-family:monospace; opacity:0.9;">
+                        <span style="color:#4db0ff; font-weight:bold;">Graph: 68%</span> · <span
+                          style="color:#00d4e8;">Seq: 21%</span> · <span style="color:#fbbf24;">Mem: 11%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Archetype B: Graph 22%, Seq 35%, Mem 43% -->
+                  <div style="display:flex; align-items:center; gap:20px;" class="archetype-row">
+                    <div class="donut-container" style="position:relative; width:80px; height:80px; flex-shrink:0;">
+                      <svg viewBox="0 0 80 80" style="transform: rotate(-90deg); width:100%; height:100%;">
+                        <circle cx="40" cy="40" r="30" fill="transparent" stroke="rgba(255,255,255,0.06)"
+                          stroke-width="7" />
+                        <circle id="b-graph" cx="40" cy="40" r="30" fill="transparent" stroke="#1e90ff" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                        <circle id="b-seq" cx="40" cy="40" r="30" fill="transparent" stroke="#00d4e8" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                        <circle id="b-mem" cx="40" cy="40" r="30" fill="transparent" stroke="#fbbf24" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                      </svg>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px; text-align:left;">
+                      <div style="font-size:.72em; color:var(--white); font-weight:600; letter-spacing:0.3px;">User
+                        Archetype II <span
+                          style="font-size:0.85em; color:var(--gold); background:rgba(251,191,36,0.1); padding:1px 6px; border-radius:3px; margin-left:6px; border:1px solid rgba(251,191,36,0.2);">Cold-Start
+                          Prospect</span></div>
+                      <div style="font-size:.58em; color:var(--white2); font-family:monospace; opacity:0.9;">
+                        <span style="color:#4db0ff; font-weight:bold;">Graph: 22%</span> · <span
+                          style="color:#00d4e8;">Seq: 35%</span> · <span style="color:#fbbf24;">Mem: 43%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Archetype C: Graph 38%, Seq 19%, Mem 43% -->
+                  <div style="display:flex; align-items:center; gap:20px;" class="archetype-row">
+                    <div class="donut-container" style="position:relative; width:80px; height:80px; flex-shrink:0;">
+                      <svg viewBox="0 0 80 80" style="transform: rotate(-90deg); width:100%; height:100%;">
+                        <circle cx="40" cy="40" r="30" fill="transparent" stroke="rgba(255,255,255,0.06)"
+                          stroke-width="7" />
+                        <circle id="c-graph" cx="40" cy="40" r="30" fill="transparent" stroke="#1e90ff" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                        <circle id="c-seq" cx="40" cy="40" r="30" fill="transparent" stroke="#00d4e8" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                        <circle id="c-mem" cx="40" cy="40" r="30" fill="transparent" stroke="#fbbf24" stroke-width="7"
+                          stroke-dasharray="0 188.5" stroke-linecap="butt" />
+                      </svg>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px; text-align:left;">
+                      <div style="font-size:.72em; color:var(--white); font-weight:600; letter-spacing:0.3px;">User
+                        Archetype III <span
+                          style="font-size:0.85em; color:var(--cyan); background:rgba(0,212,232,0.1); padding:1px 6px; border-radius:3px; margin-left:6px; border:1px solid rgba(0,212,232,0.2);">Returning
+                          Dormant</span></div>
+                      <div style="font-size:.58em; color:var(--white2); font-family:monospace; opacity:0.9;">
+                        <span style="color:#4db0ff; font-weight:bold;">Graph: 38%</span> · <span
+                          style="color:#00d4e8;">Seq: 19%</span> · <span style="color:#fbbf24;">Mem: 43%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Context Subtitle Statement -->
+                <div
+                  style="font-size:.56em; color:rgba(180,210,255,.45); border-top:1px solid rgba(255,255,255,0.08); padding-top:12px; margin-top:10px; line-height:1.5; text-align:left;">
+                  <span style="color:var(--cyan); font-weight:600;">Core Insight:</span> Multi-branch gating layers
+                  route parameters smoothly without hard cutoffs. Deep historical charts rely heavily on graph
+                  connectivity structures, while fresh/dormant clusters shift dynamic allocation values toward central
+                  global memory pools.
+                </div>
+              </div>
+
+              <!-- Metric Macro Cards Row -->
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
+                <div class="glass"
+                  style="border-radius:var(--r); border:1px solid rgba(30,144,255,.2); padding:10px 14px; text-align:center; background:rgba(30,144,255,0.03)">
+                  <div
+                    style="font-size:.55em; color:var(--sky); font-family:var(--font-m); margin-bottom:4px; letter-spacing:0.5px;">
+                    MEAN STRUCTURAL DENSITY</div>
+                  <div
+                    style="font-family:var(--font-h); font-size:1.55em; font-weight:700; color:#4db0ff; line-height:1.1;">
+                    54%</div>
+                </div>
+                <div class="glass"
+                  style="border-radius:var(--r); border:1px solid rgba(251,191,36,.2); padding:10px 14px; text-align:center; background:rgba(251,191,36,0.03)">
+                  <div
+                    style="font-size:.55em; color:var(--gold); font-family:var(--font-m); margin-bottom:4px; letter-spacing:0.5px;">
+                    MEAN RETENTION DEPENDENCY</div>
+                  <div
+                    style="font-family:var(--font-h); font-size:1.55em; font-weight:700; color:#fbbf24; line-height:1.1;">
+                    28%</div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
+
+        <!-- CSS -->
+        <style>
+          .academic-chart-slide .archetype-row {
+            transition: transform 0.3s ease, background 0.3s ease;
+            padding: 6px;
+            border-radius: 6px;
+          }
+
+          .academic-chart-slide .archetype-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateX(4px);
+          }
+
+          .donut-arc {
+            transition: stroke-dasharray 1.4s cubic-bezier(0.25, 1, 0.5, 1),
+              stroke-dashoffset 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+          }
+        </style>
+
+        <!--
+    HOW THE DONUT TECHNIQUE WORKS:
+    Each segment uses stroke-dasharray="arcLen gap" + stroke-dashoffset to rotate it
+    into its correct angular position on the ring.
+
+    C = 2 * PI * 30 = 188.496
+
+    For a segment starting at angle S (in circumference units) with length L:
+      stroke-dasharray  = "L  (C - L)"
+      stroke-dashoffset = -S           (negative = rotate clockwise from 12-o-clock)
+
+    Segments are painted in order graph → seq → mem; because each only covers its own
+    arc and is transparent elsewhere, layering order does not matter for visibility.
+  -->
+        <script>
+          (function () {
+            var C = 188.496; // 2 * PI * 30
+
+            function arc(pct) { return C * pct / 100; }
+
+            function setSegment(id, startLen, ownLen) {
+              var el = document.getElementById(id);
+              if (!el) return;
+              // Initially hidden (dasharray 0 C), then animate to real values
+              // Use a tiny delay so the transition fires
+              el.style.transition = 'none';
+              el.style.strokeDasharray = '0 ' + C;
+              el.style.strokeDashoffset = -startLen;
+
+              requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                  el.style.transition = 'stroke-dasharray 1.4s cubic-bezier(0.25,1,0.5,1)';
+                  el.style.strokeDasharray = ownLen + ' ' + (C - ownLen);
+                });
+              });
+            }
+
+            function buildDonut(prefix, graphPct, seqPct, memPct) {
+              var gLen = arc(graphPct);
+              var sLen = arc(seqPct);
+              var mLen = arc(memPct);
+
+              // Graph starts at 0 (12 o'clock after -90deg SVG rotation)
+              setSegment(prefix + '-graph', 0, gLen);
+              // Seq starts after Graph
+              setSegment(prefix + '-seq', gLen, sLen);
+              // Mem starts after Graph + Seq
+              setSegment(prefix + '-mem', gLen + sLen, mLen);
+            }
+
+            function run() {
+              buildDonut('a', 68, 21, 11);
+              buildDonut('b', 22, 35, 43);
+              buildDonut('c', 38, 19, 43);
+            }
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', run);
+            } else {
+              run();
+            }
+          })();
+        </script>
+
       </section>
+
 
       <!-- ══════════════════════════════════════════
   SLIDE 16 — EXPERIMENTAL SETUP
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
+      <!-- <section data-transition="slide">
         <div class="slide">
           <div class="grid-bg"></div>
           <div class="slide-title-bar">
@@ -4026,7 +4326,7 @@ SLIDE 15d — COMPONENT ATTRIBUTION
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- ══════════════════════════════════════════
   SLIDE 17 — TRAINING DYNAMICS
