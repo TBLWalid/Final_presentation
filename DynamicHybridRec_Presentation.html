@@ -32,22 +32,23 @@
       --font-b: 'Inter', sans-serif;
       --font-m: 'JetBrains Mono', monospace;
     }
-
-    /* ─── CHAPTER BADGE (top-left corner) ─── */
+ /* ─── CHAPTER BADGE (top-left corner) ─── */
+/* ─── CHAPTER BADGE (top-right, slightly inset) ─── */
     .chapter-badge {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 16px;
+      right: 16px;
       z-index: 200;
       pointer-events: none;
     }
 
     .chapter-badge-inner {
       display: flex;
+      flex-direction: row-reverse; /* لقلب ترتيب الشريط الجانبي ليصبح على اليمين */
       align-items: stretch;
       gap: 0;
       overflow: hidden;
-      border-bottom-right-radius: 12px;
+      border-radius: 12px; /* كل الزوايا مدورة لأنها لم تعد ملاصقة لحافة الشاشة */
     }
 
     .chapter-badge-accent {
@@ -58,15 +59,14 @@
 
     .chapter-badge-body {
       background: rgba(0, 10, 25, 0.82);
-      border-right: 1px solid rgba(0, 212, 232, 0.3);
+      border-left: 1px solid rgba(0, 212, 232, 0.3);
+      border-top: 1px solid rgba(0, 212, 232, 0.3);
       border-bottom: 1px solid rgba(0, 212, 232, 0.3);
-      border-bottom-right-radius: 12px;
-      padding: 10px 18px 10px 14px;
+      padding: 10px 14px 10px 18px;
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
-
     .chapter-badge-num {
       font-family: var(--font-m);
       font-size: 0.58em;
@@ -115,6 +115,7 @@
       background: rgba(0, 212, 232, 0.15);
       width: 8px;
     }
+   
 
     /* ─── RESET ─── */
     * {
@@ -1032,6 +1033,7 @@
       }
     }
 
+
     /* ───────────────────────────────────────────
    SLIDES 9–10 – LIGHTGCN / TRANSFORMER
 ─────────────────────────────────────────── */
@@ -1055,6 +1057,14 @@
       gap: 12px;
       align-items: flex-start;
       margin-bottom: 10px;
+    }
+
+
+    .module-right2 {
+      flex: 1.1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .module-step-num {
@@ -1082,11 +1092,22 @@
       border-radius: var(--r);
       padding: 14px;
       height: 200px;
+      box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
+    }
+
+    /* تخصيص خاص لمخطط الترانسفورمر العمودي (slide 10) فقط — يكبّر الصندوق ليتناسب مع viewBox 320×490 دون التأثير على مخطط LightGCN */
+    .module-right .module-visual {
+      height: 460px;
+    }
+
+    .module-visual svg {
+      width: 100%;
+      height: 100%;
     }
 
     .module-formula {
@@ -1101,6 +1122,7 @@
       text-align: center;
       line-height: 1.6;
     }
+
 
     /* ───────────────────────────────────────────
    SLIDE 11 – MEMORY MODULE
@@ -2378,7 +2400,7 @@
               </div>
               <div>
                 <div class="uni-name">Yahia Fares University</div>
-                <div class="uni-sub">Faculty of Sciences · Dept. of Computer Science &amp; AI</div>
+                <div class="uni-sub">Faculty of Sciences · Dept. of Mathematics &amp; Computer Science</div>
               </div>
             </div>
             <div class="defense-badge">
@@ -2388,7 +2410,7 @@
           </div>
 
           <div class="center">
-            <div class="year">Academic Year 2024 – 2025</div>
+            <div class="year">Academic Year 2025 – 2026</div>
             <div class="title">DynamicHybridRec</div>
             <div class="desc">
               A dynamic hybrid recommendation system combining
@@ -2410,7 +2432,7 @@
               </div>
               <div class="supervisor-block">
                 <div class="label label-blue">Supervisor</div>
-                <div class="supervisor-name">Ms. Sedouki Fatiha</div>
+                <div class="supervisor-name">Ms. Sadouki Fatiha</div>
               </div>
             </div>
             <div>
@@ -2442,21 +2464,25 @@
               <div class="agenda-item fragment fade-up" data-fragment-index="2"><span class="agenda-num">03</span><span
                   class="agenda-text">Research Motivation</span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="3"><span class="agenda-num">04</span><span
-                  class="agenda-text">Literature Review</span></div>
+                  class="agenda-text">Architecture</span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="4"><span class="agenda-num">05</span><span
-                  class="agenda-text">Proposed Architecture</span></div>
-              <div class="agenda-item fragment fade-up" data-fragment-index="5"><span class="agenda-num">06</span><span
                   class="agenda-text">Model Components</span></div>
+              <div class="agenda-item fragment fade-up" data-fragment-index="5"><span class="agenda-num">06</span><span
+                  class="agenda-text">Explainability</span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="6"><span class="agenda-num">07</span><span
-                  class="agenda-text">Experimental Setup</span></div>
+                  class="agenda-text">Dataset & Setup</span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="7"><span class="agenda-num">08</span><span
-                  class="agenda-text">Results &amp; Analysis</span></div>
+                  class="agenda-text">Training & Results </span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="8"><span class="agenda-num">09</span><span
-                  class="agenda-text">Explainability Analysis</span></div>
+                  class="agenda-text">Ablation Study</span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="9"><span class="agenda-num">10</span><span
-                  class="agenda-text">Web Application</span></div>
+                  class="agenda-text">XAI Evaluation</span></div>
+              <div class="agenda-item fragment fade-up" data-fragment-index="9"><span class="agenda-num">11</span><span
+                  class="agenda-text">Strengths & Limits</span></div>
+              <div class="agenda-item fragment fade-up" data-fragment-index="9"><span class="agenda-num">12</span><span
+                  class="agenda-text">Future Work</span></div>
               <div class="agenda-item fragment fade-up" data-fragment-index="10" style="grid-column:span 2"><span
-                  class="agenda-num">11</span><span class="agenda-text">Conclusion &amp; Future Work</span></div>
+                  class="agenda-num">13</span><span class="agenda-text">Conclusion &amp; Future Work</span></div>
             </div>
           </div>
         </div>
@@ -2837,11 +2863,12 @@ SLIDE: WHY DO THEY MATTER? (ANIMATED METRICS & BACKDROP LOGOS)
                 <div class="prob-desc">Interaction matrices &lt;5% density — very few known user–item pairs for learning
                 </div>
               </div>
+              <!--
               <div class="prob-card glass fragment fade-up" data-fragment-index="2">
                 <div class="prob-icon">❄️</div>
                 <div class="prob-title">Cold-Start Problem</div>
                 <div class="prob-desc">New users &amp; items have no history — standard models fail completely</div>
-              </div>
+              </div>-->
               <div class="prob-card glass fragment fade-up" data-fragment-index="3">
                 <div class="prob-icon">🧠</div>
                 <div class="prob-title">Long-Term Preference Loss</div>
@@ -3124,10 +3151,322 @@ SLIDE 8 — OVERALL ARCHITECTURE
           </div>
         </div>
       </section>
-
-      <!-- ══════════════════════════════════════════
+<!-- ══════════════════════════════════════════
   SLIDE 10 — TRANSFORMER MODULE
 ══════════════════════════════════════════ -->
+      <section data-transition="slide">
+        <div class="slide">
+          <div class="grid-bg"></div>
+          <div class="slide-title-bar">
+            <div class="slide-eyebrow">Component 2</div>
+            <div class="slide-heading">Transformer <span>Sequential Module</span></div>
+            <div class="title-line"></div>
+          </div>
+          <div class="slide-body">
+            <div class="module-layout">
+              <div class="module-left">
+                <div class="module-step fragment fade-right" data-fragment-index="0">
+                  <div class="module-step-num">①</div>
+                  <div class="module-step-text"><strong>Input Sequence</strong> — Last 80 user interactions represented as GCN-based embeddings with positional encoding.</div>
+                </div>
+                <div class="module-step fragment fade-right" data-fragment-index="1">
+                  <div class="module-step-num">②</div>
+                  <div class="module-step-text"><strong>Multi-Head Causal Self-Attention</strong> — 4 attention heads model relationships between past interactions while preventing access to future information.</div>
+                </div>
+                <div class="module-step fragment fade-right" data-fragment-index="2">
+                  <div class="module-step-num">③</div>
+                  <div class="module-step-text"><strong>Transformer Blocks</strong> — Attention, Feed-Forward Network, Residual Connections, and Layer Normalization capture sequential user behavior.</div>
+                </div>
+                <div class="module-step fragment fade-right" data-fragment-index="3">
+                  <div class="module-step-num">④</div>
+                  <div class="module-step-text"><strong>Final Sequential Representation</strong> — The last hidden state summarizes the user's recent interests and behavioral patterns.</div>
+                </div>
+                <div class="module-formula fragment fade-up" data-fragment-index="4">
+                  Attention(Q,K,V) = softmax(QKᵀ/√d) · V<br>
+                  MultiHead = Concat(head₁…headₕ) · Wᴼ
+                </div>
+              </div>
+              <div class="module-right">
+                <div class="module-visual fragment fade-left" data-fragment-index="0">
+                  <svg width="100%" viewBox="0 0 340 520" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10"
+      refX="8" refY="5"
+      markerWidth="5" markerHeight="5"
+      orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9"
+        fill="none"
+        stroke="context-stroke"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="0" y="14"
+    fill="rgba(180,210,255,0.35)"
+    font-family="Inter"
+    font-size="10"
+    font-weight="600"
+    letter-spacing="0.1em">
+    USER INTERACTION SEQUENCE
+  </text>
+
+  <line x1="0" y1="22" x2="340" y2="22"
+    stroke="rgba(180,200,255,0.08)"
+    stroke-width="0.5"/>
+
+  <!-- Tokens -->
+
+  <rect x="0" y="36" width="64" height="72" rx="8"
+    fill="rgba(255,255,255,0.03)"
+    stroke="rgba(180,200,255,0.14)"/>
+
+  <text x="32" y="64"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.6)"
+    font-size="13">
+    M1
+  </text>
+
+  <text x="32" y="84"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.25)"
+    font-size="10">
+    t=1
+  </text>
+
+  <rect x="78" y="36" width="64" height="72" rx="8"
+    fill="rgba(255,255,255,0.03)"
+    stroke="rgba(180,200,255,0.14)"/>
+
+  <text x="110" y="64"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.6)"
+    font-size="13">
+    M2
+  </text>
+
+  <text x="110" y="84"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.25)"
+    font-size="10">
+    t=2
+  </text>
+
+  <rect x="156" y="36" width="64" height="72" rx="8"
+    fill="rgba(255,255,255,0.03)"
+    stroke="rgba(180,200,255,0.14)"/>
+
+  <text x="188" y="64"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.6)"
+    font-size="13">
+    M3
+  </text>
+
+  <text x="188" y="84"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.25)"
+    font-size="10">
+    t=3
+  </text>
+
+  <rect x="234" y="28" width="90" height="88" rx="10"
+    fill="rgba(0,212,232,0.09)"
+    stroke="rgba(0,212,232,0.75)"
+    stroke-width="1.6"/>
+
+  <text x="279" y="62"
+    text-anchor="middle"
+    fill="#00d4e8"
+    font-size="14"
+    font-weight="700">
+    M4
+  </text>
+
+  <text x="279" y="84"
+    text-anchor="middle"
+    fill="rgba(0,212,232,0.55)"
+    font-size="10">
+    Most Recent
+  </text>
+
+  <!-- Arrows -->
+
+  <line x1="64" y1="72" x2="78" y2="72"
+    stroke="rgba(180,200,255,0.22)"
+    marker-end="url(#arr2)"/>
+
+  <line x1="142" y1="72" x2="156" y2="72"
+    stroke="rgba(180,200,255,0.22)"
+    marker-end="url(#arr2)"/>
+
+  <line x1="220" y1="72" x2="234" y2="72"
+    stroke="rgba(180,200,255,0.22)"
+    marker-end="url(#arr2)"/>
+
+  <!-- Positional Encoding -->
+
+  <rect x="60" y="140"
+    width="220"
+    height="40"
+    rx="8"
+    fill="rgba(255,193,7,0.07)"
+    stroke="rgba(255,193,7,0.4)"/>
+
+  <text x="170" y="165"
+    text-anchor="middle"
+    fill="#ffd166"
+    font-size="12"
+    font-weight="600">
+    Positional Encoding
+  </text>
+
+  <!-- Transformer -->
+
+  <line x1="170" y1="180" x2="170" y2="205"
+    stroke="rgba(255,193,7,0.4)"
+    marker-end="url(#arr2)"/>
+
+  <rect x="45" y="205"
+    width="250"
+    height="75"
+    rx="10"
+    fill="rgba(0,212,232,0.05)"
+    stroke="rgba(0,212,232,0.35)"/>
+
+  <text x="170" y="228"
+    text-anchor="middle"
+    fill="#00d4e8"
+    font-size="13"
+    font-weight="700">
+    Transformer Encoder
+  </text>
+
+  <text x="170" y="248"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.55)"
+    font-size="11">
+    2 Transformer Blocks
+  </text>
+
+  <text x="170" y="266"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.35)"
+    font-size="10">
+    4-Head Causal Self-Attention
+  </text>
+
+  <!-- h_last -->
+
+  <line x1="170" y1="280" x2="170" y2="305"
+    stroke="rgba(52,211,153,0.45)"
+    marker-end="url(#arr2)"/>
+
+  <rect x="100" y="305"
+  width="140"
+  height="60"
+  rx="10"
+  fill="rgba(52,211,153,0.07)"
+  stroke="rgba(52,211,153,0.45)"
+  stroke-width="1.4"/>
+
+  <text x="170" y="330"
+    text-anchor="middle"
+    fill="#34d399"
+    font-size="13"
+    font-weight="700">
+    h_last
+  </text>
+
+  <text x="170" y="348"
+    text-anchor="middle"
+    fill="rgba(52,211,153,0.55)"
+    font-size="10">
+    Sequential Representation
+  </text>
+
+  <!-- Fusion -->
+
+  <line x1="170" y1="360" x2="170" y2="388"
+    stroke="rgba(124,92,252,0.35)"
+    marker-end="url(#arr2)"/>
+
+  <rect x="65" y="388"
+    width="210"
+    height="46"
+    rx="9"
+    fill="rgba(124,92,252,0.08)"
+    stroke="rgba(124,92,252,0.35)"/>
+
+  <text x="170" y="415"
+    text-anchor="middle"
+    fill="rgba(210,190,255,0.9)"
+    font-size="12"
+    font-weight="600">
+    Cross-Attention Fusion
+  </text>
+
+  <!-- Footer Cards -->
+
+  <rect x="0" y="460"
+    width="155"
+    height="48"
+    rx="8"
+    fill="rgba(255,255,255,0.02)"
+    stroke="rgba(180,200,255,0.08)"/>
+
+  <text x="78" y="480"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.65)"
+    font-size="11"
+    font-weight="600">
+    Order Preserved
+  </text>
+
+  <text x="78" y="497"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.28)"
+    font-size="10">
+    t₁ → t₂ → t₃ → t₄
+  </text>
+
+  <rect x="175" y="460"
+    width="165"
+    height="48"
+    rx="8"
+    fill="rgba(255,255,255,0.02)"
+    stroke="rgba(180,200,255,0.08)"/>
+
+  <text x="257" y="480"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.65)"
+    font-size="11"
+    font-weight="600">
+    Temporal Dependencies
+  </text>
+
+  <text x="257" y="497"
+    text-anchor="middle"
+    fill="rgba(180,210,255,0.28)"
+    font-size="10">
+    Attention learns relevance
+  </text>
+
+</svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- ══════════════════════════════════════════
+  SLIDE 10 — TRANSFORMER MODULE
+══════════════════════════════════════════ 
       <section data-transition="slide">
         <div class="slide">
           <div class="grid-bg"></div>
@@ -3251,7 +3590,7 @@ SLIDE 8 — OVERALL ARCHITECTURE
 
             <div class="tf-body">
 
-              <!-- LEFT: steps + formula -->
+               
               <div class="tf-steps">
 
                 <div class="tf-step fragment fade-right" data-fragment-index="0">
@@ -3315,9 +3654,9 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   </svg>
                 </div>
 
-              </div><!-- /tf-steps -->
+              </div>
 
-              <!-- RIGHT: diagram -->
+              
               <div class="fragment fade-left" data-fragment-index="0">
                 <svg width="100%" viewBox="0 0 320 490" xmlns="http://www.w3.org/2000/svg">
                   <defs>
@@ -3328,12 +3667,12 @@ SLIDE 8 — OVERALL ARCHITECTURE
                     </marker>
                   </defs>
 
-                  <!-- Section label -->
+                  
                   <text x="0" y="14" fill="rgba(180,210,255,0.3)" font-family="Inter" font-size="10" font-weight="500"
                     letter-spacing="0.1em">CLICK HISTORY</text>
                   <line x1="0" y1="22" x2="320" y2="22" stroke="rgba(180,200,255,0.08)" stroke-width="0.5" />
 
-                  <!-- Token: M1 -->
+                  
                   <rect x="0" y="32" width="64" height="72" rx="8" fill="rgba(255,255,255,0.03)"
                     stroke="rgba(180,200,255,0.14)" stroke-width="0.5" />
                   <text x="32" y="62" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.55)"
@@ -3341,7 +3680,7 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <text x="32" y="82" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.22)"
                     font-family="Inter" font-size="10">t=1</text>
 
-                  <!-- Token: M2 -->
+                 
                   <rect x="76" y="32" width="64" height="72" rx="8" fill="rgba(255,255,255,0.03)"
                     stroke="rgba(180,200,255,0.14)" stroke-width="0.5" />
                   <text x="108" y="62" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.55)"
@@ -3349,7 +3688,7 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <text x="108" y="82" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.22)"
                     font-family="Inter" font-size="10">t=2</text>
 
-                  <!-- Token: M3 -->
+                  
                   <rect x="152" y="32" width="64" height="72" rx="8" fill="rgba(255,255,255,0.03)"
                     stroke="rgba(180,200,255,0.14)" stroke-width="0.5" />
                   <text x="184" y="62" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.55)"
@@ -3357,7 +3696,7 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <text x="184" y="82" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.22)"
                     font-family="Inter" font-size="10">t=3</text>
 
-                  <!-- Token: M4 (most recent, highlighted) -->
+                  
                   <rect x="228" y="24" width="86" height="88" rx="9" fill="rgba(0,212,232,0.09)"
                     stroke="rgba(0,212,232,0.65)" stroke-width="1.5" />
                   <text x="271" y="60" text-anchor="middle" dominant-baseline="central" fill="#00d4e8"
@@ -3365,7 +3704,7 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <text x="271" y="82" text-anchor="middle" dominant-baseline="central" fill="rgba(0,212,232,0.55)"
                     font-family="Inter" font-size="10">most recent</text>
 
-                  <!-- Sequence arrows -->
+                  
                   <line x1="64" y1="68" x2="76" y2="68" stroke="rgba(180,200,255,0.22)" stroke-width="1.5"
                     marker-end="url(#arr2)" />
                   <line x1="140" y1="68" x2="152" y2="68" stroke="rgba(180,200,255,0.22)" stroke-width="1.5"
@@ -3373,12 +3712,12 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <line x1="216" y1="68" x2="228" y2="68" stroke="rgba(180,200,255,0.22)" stroke-width="1.5"
                     marker-end="url(#arr2)" />
 
-                  <!-- Recency axis labels -->
+                  
                   <text x="0" y="118" fill="rgba(180,210,255,0.2)" font-family="Inter" font-size="9.5">older</text>
                   <text x="320" y="118" text-anchor="end" fill="rgba(0,212,232,0.45)" font-family="Inter"
                     font-size="9.5">more recent →</text>
 
-                  <!-- Attention fan (variable weight by recency) -->
+                  
                   <line x1="32" y1="104" x2="160" y2="218" stroke="rgba(0,212,232,0.11)" stroke-width="1"
                     stroke-linecap="round" />
                   <line x1="108" y1="104" x2="160" y2="218" stroke="rgba(0,212,232,0.30)" stroke-width="2.5"
@@ -3388,13 +3727,13 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <line x1="271" y1="112" x2="160" y2="218" stroke="rgba(0,212,232,0.88)" stroke-width="7"
                     stroke-linecap="round" />
 
-                  <!-- Fan annotation -->
+                  
                   <text x="160" y="182" text-anchor="middle" fill="rgba(180,210,255,0.2)" font-family="Inter"
                     font-size="9.5">
                     line weight = attention score
                   </text>
 
-                  <!-- h_user output box -->
+                  
                   <rect x="112" y="218" width="96" height="52" rx="9" fill="rgba(52,211,153,0.07)"
                     stroke="rgba(52,211,153,0.45)" stroke-width="1.5" />
                   <text x="160" y="240" text-anchor="middle" dominant-baseline="central" fill="#34d399"
@@ -3402,11 +3741,11 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   <text x="160" y="258" text-anchor="middle" dominant-baseline="central" fill="rgba(52,211,153,0.5)"
                     font-family="Inter" font-size="10">[CLS] token</text>
 
-                  <!-- Arrow to fusion -->
+                  
                   <line x1="160" y1="270" x2="160" y2="300" stroke="rgba(52,211,153,0.38)" stroke-width="1.5"
                     marker-end="url(#arr2)" />
 
-                  <!-- CrossAttentionFusion box -->
+                  
                   <rect x="60" y="300" width="200" height="44" rx="8" fill="rgba(124,92,252,0.08)"
                     stroke="rgba(124,92,252,0.32)" stroke-width="1" />
                   <text x="160" y="322" text-anchor="middle" dominant-baseline="central" fill="rgba(180,150,255,0.88)"
@@ -3414,7 +3753,7 @@ SLIDE 8 — OVERALL ARCHITECTURE
                     CrossAttentionFusion
                   </text>
 
-                  <!-- Bottom caption cards -->
+                  
                   <rect x="0" y="366" width="148" height="50" rx="7" fill="rgba(255,255,255,0.02)"
                     stroke="rgba(180,200,255,0.09)" stroke-width="0.5" />
                   <text x="74" y="383" text-anchor="middle" dominant-baseline="central" fill="rgba(180,210,255,0.62)"
@@ -3438,144 +3777,527 @@ SLIDE 8 — OVERALL ARCHITECTURE
                   </text>
 
                 </svg>
-              </div><!-- /diagram col -->
+              
 
-            </div><!-- /tf-body -->
-          </div><!-- /tf-slide-wrap -->
+            </div>
+          </div>
 
         </div>
       </section>
-
-      <!-- ══════════════════════════════════════════
+-->
+<!-- ══════════════════════════════════════════
 SLIDE 11 — EXTERNAL MEMORY MODULE
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
-        <div class="slide">
-          <div class="grid-bg"></div>
-          <div class="slide-title-bar">
-            <div class="slide-eyebrow">Component 3</div>
-            <div class="slide-heading">External <span>Memory Module</span></div>
-            <div class="title-line"></div>
+
+<section data-transition="slide">
+
+  <div class="slide">
+
+    <div class="grid-bg"></div>
+
+
+    <div class="slide-title-bar">
+
+      <div class="slide-eyebrow">Component 3</div>
+
+      <div class="slide-heading">
+        External <span>Memory Module</span>
+      </div>
+
+      <div class="title-line"></div>
+
+    </div>
+
+
+
+
+    <div class="slide-body">
+
+
+      <div class="mem-layout"
+        style="
+        gap:14px;
+        align-items:flex-start;
+        width:100%;
+        max-width:900px">
+
+
+
+        <!-- LEFT COLUMN -->
+
+        <div 
+          style="
+          flex:1.1;
+          display:flex;
+          flex-direction:column;
+          gap:8px">
+
+
+          <div
+            style="
+            font-size:.7em;
+            color:var(--white2);
+            line-height:1.5">
+
+
+            <strong style="color:var(--gold)">
+              Problem:
+            </strong>
+
+            Transformers are limited to a fixed context window —
+            older user preferences may be lost as history grows.
+
+
           </div>
-          <div class="slide-body">
-            <div class="mem-layout" style="gap:14px;align-items:flex-start;width:100%;max-width:900px">
 
-              <!-- LEFT COLUMN -->
-              <div style="flex:1.1;display:flex;flex-direction:column;gap:8px">
-                <div style="font-size:.7em;color:var(--white2);line-height:1.5">
-                  <strong style="color:var(--gold)">Problem:</strong> Transformers are limited to a fixed context window
-                  —
-                  early preferences get discarded as history grows.
-                </div>
-                <div style="font-size:.7em;color:var(--white2);line-height:1.5">
-                  <strong style="color:var(--green)">Solution:</strong> An external key–value memory bank with
-                  <strong>M slots</strong>, accessible via soft-attention retrieval.
-                </div>
 
-                <div
-                  style="font-size:.62em;color:var(--sky);font-family:var(--font-m);letter-spacing:2px;margin-top:4px">
-                  MEMORY SLOTS (M=512)</div>
-                <div class="mem-slots" style="grid-template-columns:repeat(8,1fr);gap:4px">
-                  <div class="mem-slot hi" style="animation-delay:.0s">K₁</div>
-                  <div class="mem-slot hi" style="animation-delay:.2s">K₂</div>
-                  <div class="mem-slot md" style="animation-delay:.4s">K₃</div>
-                  <div class="mem-slot md" style="animation-delay:.6s">K₄</div>
-                  <div class="mem-slot hi" style="animation-delay:.8s">K₅</div>
-                  <div class="mem-slot lo" style="animation-delay:1s">K₆</div>
-                  <div class="mem-slot lo" style="animation-delay:1.2s">K₇</div>
-                  <div class="mem-slot md" style="animation-delay:1.4s">K₈</div>
-                </div>
 
-                <div class="mem-eq fragment fade-up" data-fragment-index="0"
-                  style="font-size:.66em;padding:8px 12px;line-height:1.6">
-                  α = softmax(8.0 × normalize(W<sub>q</sub>·q) · normalize(K)ᵀ)<br>
-                  r = α · V &nbsp;← weighted memory output
-                </div>
-              </div>
 
-              <!-- RIGHT COLUMN -->
-              <div style="flex:1;display:flex;flex-direction:column;gap:7px">
-                <div class="module-step fragment fade-left" data-fragment-index="1">
-                  <div class="module-step-num">①</div>
-                  <div class="module-step-text" style="font-size:.75em"><strong>Write:</strong> After each interaction,
-                    memory is updated via LRU policy with erase + add vectors</div>
-                </div>
-                <div class="module-step fragment fade-left" data-fragment-index="2">
-                  <div class="module-step-num">②</div>
-                  <div class="module-step-text" style="font-size:.75em"><strong>Read:</strong> Query q = current user
-                    state; attention over K returns weighted value vector r</div>
-                </div>
-                <div class="module-step fragment fade-left" data-fragment-index="3">
-                  <div class="module-step-num">③</div>
-                  <div class="module-step-text" style="font-size:.75em"><strong>Sharpness:</strong> Temperature=8.0
-                    produces peaked attention — retrieves the most relevant past preference</div>
-                </div>
-                <div class="module-step fragment fade-left" data-fragment-index="4">
-                  <div class="module-step-num">④</div>
-                  <div class="module-step-text" style="font-size:.75em"><strong>Output:</strong> Memory vector r is
-                    fused with Transformer hidden state before gating</div>
-                </div>
-              </div>
+
+          <div
+            style="
+            font-size:.7em;
+            color:var(--white2);
+            line-height:1.5">
+
+
+            <strong style="color:var(--green)">
+              Solution:
+            </strong>
+
+            A learnable differentiable key–value memory bank with
+            <strong>M slots</strong>
+            that stores compressed long-term preference patterns
+            using soft-attention retrieval.
+
+
+          </div>
+
+
+
+
+
+
+          <div
+            style="
+            font-size:.62em;
+            color:var(--sky);
+            font-family:var(--font-m);
+            letter-spacing:2px;
+            margin-top:4px">
+
+
+            MEMORY SLOTS (M=128)
+
+
+          </div>
+
+
+
+
+
+
+
+          <div 
+            class="mem-slots"
+            style="
+            grid-template-columns:repeat(8,1fr);
+            gap:4px">
+
+
+            <div class="mem-slot hi">K₁</div>
+            <div class="mem-slot hi">K₂</div>
+            <div class="mem-slot md">K₃</div>
+            <div class="mem-slot md">K₄</div>
+            <div class="mem-slot hi">K₅</div>
+            <div class="mem-slot lo">K₆</div>
+            <div class="mem-slot lo">K₇</div>
+            <div class="mem-slot md">K₈</div>
+
+
+          </div>
+
+
+
+
+
+
+
+          <div 
+            class="mem-eq fragment fade-up"
+            data-fragment-index="0"
+
+            style="
+            font-size:.66em;
+            padding:8px 12px;
+            line-height:1.6">
+
+
+            α = softmax(8.0 × normalize(W<sub>q</sub>·q)
+            · normalize(K)ᵀ)
+
+            <br>
+
+
+            mem_out =
+            W<sub>out</sub>(α · V)
+
+            &nbsp;← retrieved memory representation
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- RIGHT COLUMN -->
+
+
+        <div
+
+          style="
+          flex:1;
+          display:flex;
+          flex-direction:column;
+          gap:7px">
+
+
+
+
+
+
+
+          <div
+            class="module-step fragment fade-left"
+            data-fragment-index="1">
+
+
+            <div class="module-step-num">
+              ①
+            </div>
+
+
+            <div
+              class="module-step-text"
+              style="font-size:.75em">
+
+
+              <strong>
+                Learnable Memory:
+              </strong>
+
+              Key and Value matrices are optimized
+              jointly during training
+
 
             </div>
+
+
           </div>
+
+
+
+
+
+
+
+
+          <div
+            class="module-step fragment fade-left"
+            data-fragment-index="2">
+
+
+            <div class="module-step-num">
+              ②
+            </div>
+
+
+            <div
+              class="module-step-text"
+              style="font-size:.75em">
+
+
+              <strong>
+                Soft Read:
+              </strong>
+
+              Query q = seq_last + 0.5 × ugcn;
+              attention over K retrieves the weighted memory output
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div
+            class="module-step fragment fade-left"
+            data-fragment-index="3">
+
+
+            <div class="module-step-num">
+              ③
+            </div>
+
+
+            <div
+              class="module-step-text"
+              style="font-size:.75em">
+
+
+              <strong>
+                Sharp Retrieval:
+              </strong>
+
+              Sharpness factor = 8.0
+              encourages focused memory selection
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div
+            class="module-step fragment fade-left"
+            data-fragment-index="4">
+
+
+            <div class="module-step-num">
+              ④
+            </div>
+
+
+            <div
+              class="module-step-text"
+              style="font-size:.75em">
+
+
+              <strong>
+                Output:
+              </strong>
+
+              Memory representation is fused with
+              Transformer hidden representation
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
         </div>
-      </section>
 
 
-      <!-- ══════════════════════════════════════════
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+</section>
+
+
+<!-- ══════════════════════════════════════════
   SLIDE 13 — CROSS-ATTENTION FUSION
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
-        <div class="slide">
-          <div class="grid-bg"></div>
-          <div class="slide-title-bar">
-            <div class="slide-eyebrow">Component 4</div>
-            <div class="slide-heading">Cross-Attention <span>Fusion</span></div>
-            <div class="title-line"></div>
+<section data-transition="slide">
+  <div class="slide">
+    <div class="grid-bg"></div>
+
+    <div class="slide-title-bar">
+      <div class="slide-eyebrow">Component 4</div>
+      <div class="slide-heading">Cross-Attention <span>Fusion</span></div>
+      <div class="title-line"></div>
+    </div>
+
+
+    <div class="slide-body" style="flex-direction:column;gap:12px;align-items:center">
+
+      <div class="xattn-visual">
+
+        <!-- Inputs -->
+        <div class="xattn-row fragment fade-down" data-fragment-index="0">
+
+          <div class="xattn-box gcn">
+             LightGCN Embedding<br>
+            <small style="color:var(--white2);font-weight:400">
+              Collaborative Signal
+            </small>
           </div>
-          <div class="slide-body" style="flex-direction:column;gap:12px;align-items:center">
-            <div class="xattn-visual">
-              <div class="xattn-row fragment fade-down" data-fragment-index="0">
-                <div class="xattn-box gcn">📊 LightGCN Embedding<br><small
-                    style="color:var(--white2);font-weight:400">Collaborative Signal</small></div>
-                <div style="font-size:1.4em;color:rgba(56,189,248,.4)">⇄</div>
-                <div class="xattn-box tf">⚡ Transformer Output<br><small
-                    style="color:var(--white2);font-weight:400">Sequential Signal</small></div>
-              </div>
-              <div class="xattn-arrow fragment fade-in" data-fragment-index="1">↓</div>
-              <div class="xattn-mid glass fragment fade-up" data-fragment-index="2">
-                🔀 Cross-Attention Mechanism<br>
-                <small style="color:var(--white2);font-weight:400;font-size:.85em">Q from one branch · K,V from other —
-                  bidirectional</small>
-              </div>
-              <div class="xattn-arrow fragment fade-in" data-fragment-index="3">↓</div>
-              <div class="xattn-out glass fragment fade-up" data-fragment-index="4">
-                ✨ Fused Representation<br>
-                <small style="color:var(--white2);font-weight:400;font-size:.85em">Collaborative + Sequential jointly
-                  encoded</small>
-              </div>
-            </div>
-            <div class="xattn-steps" style="max-width:640px">
-              <div class="xattn-step fragment fade-up" data-fragment-index="5">
-                <span class="xattn-step-n">①</span>
-                <span>LightGCN embedding queries the Transformer space — finding which sequential patterns align with
-                  collaborative neighbors</span>
-              </div>
-              <div class="xattn-step fragment fade-up" data-fragment-index="6">
-                <span class="xattn-step-n">②</span>
-                <span>Transformer context queries the graph space — identifying collaborative neighbors relevant to
-                  current behavioral context</span>
-              </div>
-              <div class="xattn-step fragment fade-up" data-fragment-index="7">
-                <span class="xattn-step-n">③</span>
-                <span>Bidirectional cross-attention creates a richer joint embedding that captures both global structure
-                  and local sequence dynamics simultaneously</span>
-              </div>
-            </div>
+
+
+          <div style="font-size:1.2em;color:rgba(56,189,248,.4)">
+            +
           </div>
+
+
+          <div class="xattn-box tf">
+             Transformer Output<br>
+            <small style="color:var(--white2);font-weight:400">
+              Sequential Signal
+            </small>
+          </div>
+
+
+          <div style="font-size:1.2em;color:rgba(56,189,248,.4)">
+            +
+          </div>
+
+
+          <div class="xattn-box mem">
+             External Memory<br>
+            <small style="color:var(--white2);font-weight:400">
+              Long-term Preference
+            </small>
+          </div>
+
         </div>
-      </section>
+
+
+
+        <!-- Arrow -->
+        <div class="xattn-arrow fragment fade-in" data-fragment-index="1">
+          ↓
+        </div>
+
+
+
+        <!-- Gate + Attention -->
+        <div class="xattn-mid glass fragment fade-up" 
+             data-fragment-index="2">
+
+          🔀 Gated Cross-Attention Fusion<br>
+
+          <small style="color:var(--white2);font-weight:400;font-size:.85em">
+
+            Global Context → Query<br>
+            Transformer Sequence → Key, Value
+
+          </small>
+
+        </div>
+
+
+
+        <div class="xattn-arrow fragment fade-in" data-fragment-index="3">
+          ↓
+        </div>
+
+
+
+        <!-- Output -->
+        <div class="xattn-out glass fragment fade-up" 
+             data-fragment-index="4">
+
+          ✨ Fused Representation<br>
+
+          <small style="color:var(--white2);font-weight:400;font-size:.85em">
+
+            Collaborative + Sequential + Memory jointly encoded
+
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <!-- Explanation steps -->
+
+      <div class="xattn-steps" style="max-width:640px">
+
+
+        <div class="xattn-step fragment fade-up" data-fragment-index="5">
+
+          <span class="xattn-step-n">①</span>
+
+          <span>
+            Gated global context adaptively balances LightGCN and Memory
+            contributions using learnable gates
+          </span>
+
+        </div>
+
+
+
+        <div class="xattn-step fragment fade-up" data-fragment-index="6">
+
+          <span class="xattn-step-n">②</span>
+
+          <span>
+            The global context acts as Query, while the Transformer sequence
+            provides Keys and Values for cross-attention
+          </span>
+
+        </div>
+
+
+
+        <div class="xattn-step fragment fade-up" data-fragment-index="7">
+
+          <span class="xattn-step-n">③</span>
+
+          <span>
+            Cross-attention selects relevant behavioral patterns and produces
+            the final fused user representation
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -4184,70 +4906,320 @@ SLIDE 11 — EXTERNAL MEMORY MODULE
 
 
 
-      <!-- ══════════════════════════════════════════
+<!-- ══════════════════════════════════════════
   SLIDE 15 — DATASET
 ══════════════════════════════════════════ -->
-      <section data-transition="slide">
-        <div class="slide">
-          <div class="grid-bg"></div>
-          <div class="slide-title-bar">
-            <div class="slide-eyebrow">Data</div>
-            <div class="slide-heading">Dataset <span>Description</span></div>
-            <div class="title-line"></div>
+
+<section data-transition="slide">
+
+  <div class="slide">
+
+    <div class="grid-bg"></div>
+
+
+    <div class="slide-title-bar">
+
+      <div class="slide-eyebrow">Data</div>
+
+      <div class="slide-heading">
+        Dataset <span>Description</span>
+      </div>
+
+      <div class="title-line"></div>
+
+    </div>
+
+
+
+    <div class="slide-body">
+
+
+      <div class="dataset-layout" style="max-width:820px">
+
+
+
+        <!-- Dataset Overview Card -->
+
+        <div class="dataset-card glass">
+
+
+          <div class="dataset-name">
+            📽 MovieLens 1M
           </div>
-          <div class="slide-body">
-            <div class="dataset-layout" style="max-width:820px">
-              <div class="dataset-card glass">
-                <div class="dataset-name">📽 MovieLens 1M</div>
-                <div class="dataset-stats">
-                  <div class="ds-stat"><span class="ds-stat-label">Total Users</span><span
-                      class="ds-stat-value">6,040</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Total Movies</span><span
-                      class="ds-stat-value">3,706</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Total Ratings</span><span
-                      class="ds-stat-value">1,000,209</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Rating Scale</span><span class="ds-stat-value">1 – 5
-                      stars</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Sparsity</span><span class="ds-stat-value"
-                      style="color:var(--gold)">≈ 95.5%</span></div>
-                  <div class="ds-stat"><span class="ds-stat-label">Time Period</span><span class="ds-stat-value">2000 –
-                      2003</span></div>
-                </div>
-                <div class="dataset-bar-wrap">
-                  <div class="dataset-bar" style="width:4.5%"></div>
-                </div>
-                <div
-                  style="font-size:.6em;color:rgba(180,210,255,.5);text-align:right;margin-top:3px;font-family:var(--font-m)">
-                  density: 4.5%</div>
-              </div>
-              <div style="flex:1.5;display:flex;flex-direction:column;gap:10px">
-                <div class="glass" style="border-radius:var(--r);padding:14px;border:1px solid rgba(56,189,248,.15)">
-                  <div
-                    style="font-size:.65em;color:var(--sky);font-family:var(--font-m);letter-spacing:2px;margin-bottom:8px">
-                    PREPROCESSING</div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="0"><i
-                      class="fa fa-check-circle"></i><span><strong>Binarization:</strong> ratings ≥ 4 treated as
-                      positive implicit feedback</span></div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="1"><i
-                      class="fa fa-check-circle"></i><span><strong>Split:</strong> leave-one-out — last item for test,
-                      second-to-last for validation</span></div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="2"><i
-                      class="fa fa-check-circle"></i><span><strong>Negative Sampling:</strong> 99 random negatives per
-                      positive test interaction</span></div>
-                  <div class="setup-item fragment fade-left" data-fragment-index="3"><i
-                      class="fa fa-check-circle"></i><span><strong>Min. interactions:</strong> users with &lt;5 ratings
-                      filtered out</span></div>
-                </div>
-                <div class="glass fragment fade-up" data-fragment-index="4"
-                  style="border-radius:var(--r);padding:12px;border:1px solid rgba(56,189,248,.15);font-size:.72em;color:var(--sky);line-height:1.5">
-                  💡 MovieLens-1M is the standard benchmark for recommender systems evaluation — used by LightGCN,
-                  SASRec, BERT4Rec, and SimGCL for direct comparison
-                </div>
-              </div>
+
+
+
+
+          <div class="dataset-stats">
+
+
+            <div class="ds-stat">
+
+              <span class="ds-stat-label">
+                Total Users
+              </span>
+
+              <span class="ds-stat-value">
+                6,040
+              </span>
+
             </div>
+
+
+
+
+            <div class="ds-stat">
+
+              <span class="ds-stat-label">
+                Total Movies
+              </span>
+
+              <span class="ds-stat-value">
+                3,706
+              </span>
+
+            </div>
+
+
+
+
+
+            <div class="ds-stat">
+
+              <span class="ds-stat-label">
+                Total Interactions
+              </span>
+
+              <span class="ds-stat-value">
+                1,000,209
+              </span>
+
+            </div>
+
+
+
+
+
+            <div class="ds-stat">
+
+              <span class="ds-stat-label">
+                Feedback Type
+              </span>
+
+              <span class="ds-stat-value">
+                Implicit
+              </span>
+
+            </div>
+
+
+
+
+
+            <div class="ds-stat">
+
+              <span class="ds-stat-label">
+                Min. Interactions
+              </span>
+
+              <span class="ds-stat-value">
+                ≥ 5
+              </span>
+
+            </div>
+
+
+
+
+
+            <div class="ds-stat">
+
+              <span class="ds-stat-label">
+                Timestamp Span
+              </span>
+
+              <span class="ds-stat-value">
+                1995–2003
+              </span>
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+          <div class="dataset-bar-wrap">
+
+            <div 
+              class="dataset-bar"
+              style="width:65%">
+            </div>
+
+          </div>
+
+
+
+
+          <div
+            style="
+            font-size:.6em;
+            color:rgba(180,210,255,.5);
+            text-align:right;
+            margin-top:3px;
+            font-family:var(--font-m)"
+          >
+
+            chronological interaction history
+
           </div>
         </div>
-      </section>
+        <!-- Preprocessing -->
+
+        <div
+          style="
+          flex:1.5;
+          display:flex;
+          flex-direction:column;
+          gap:10px"
+        >
+
+          <div
+            class="glass"
+
+            style="
+            border-radius:var(--r);
+            padding:14px;
+            border:1px solid rgba(56,189,248,.15)"
+          >
+
+            <div
+
+              style="
+              font-size:.65em;
+              color:var(--sky);
+              font-family:var(--font-m);
+              letter-spacing:2px;
+              margin-bottom:8px"
+
+            >
+
+              PREPROCESSING
+
+            </div>
+
+            <div
+              class="setup-item fragment fade-left"
+              data-fragment-index="0"
+            >
+
+              <i class="fa fa-check-circle"></i>
+
+              <span>
+
+                <strong>Filtering:</strong>
+                Users and items with fewer than 5 interactions are removed
+
+              </span>
+
+            </div>
+
+            <div
+              class="setup-item fragment fade-left"
+              data-fragment-index="1"
+            >
+
+              <i class="fa fa-check-circle"></i>
+
+              <span>
+
+                <strong>ID Remapping:</strong>
+                user2idx / item2idx conversion for neural models
+
+              </span>
+
+            </div>
+
+            <div
+              class="setup-item fragment fade-left"
+              data-fragment-index="2"
+            >
+
+              <i class="fa fa-check-circle"></i>
+
+              <span>
+
+                <strong>Chronological Split:</strong>
+                Preserve interaction order for sequential learning
+
+              </span>
+
+            </div>
+
+            <div
+              class="setup-item fragment fade-left"
+              data-fragment-index="3"
+            >
+
+              <i class="fa fa-check-circle"></i>
+
+              <span>
+
+                <strong>Train / Val / Test:</strong>
+                Last interaction for test, second-to-last for validation
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="setup-item fragment fade-left"
+              data-fragment-index="4"
+            >
+
+              <i class="fa fa-check-circle"></i>
+
+              <span>
+
+                <strong>Negative Sampling:</strong>
+                99 negative samples per positive test interaction
+
+              </span>
+
+            </div>
+
+
+          </div>
+
+          <!-- Motivation Box -->
+
+          <div
+
+            class="glass fragment fade-up"
+
+            data-fragment-index="5"
+
+            style="
+            border-radius:var(--r);
+            padding:12px;
+            border:1px solid rgba(56,189,248,.15);
+            font-size:.72em;
+            color:var(--sky);
+            line-height:1.5"
+
+          >
+            💡
+MovieLens-1M is the standard benchmark for recommender systems evaluation — used by LightGCN, SASRec, BERT4Rec, and SimGCL for direct comparison
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <!-- ══════════════════════════════════════════
   SLIDE 17 — TRAINING DYNAMICS
 ══════════════════════════════════════════ -->
@@ -4955,7 +5927,7 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
           <div
             style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:16px; width:100%; max-width:940px; margin:0 auto;">
 
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; direction:rtl;">
 
               <div class="glass fragment fade-right" data-fragment-index="0"
                 style="background:rgba(255,255,255,0.01); border:1px solid rgba(56,189,248,0.12); border-radius:10px; padding:12px 18px; display:flex; flex-direction:column; gap:4px;">
@@ -4990,36 +5962,7 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%;" class="fragment fade-up"
               data-fragment-index="1">
 
-              <div
-                style="background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.04); border-radius:10px; padding:14px; display:flex; flex-direction:column; gap:10px;">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <div
-                    style="font-size:0.62em; font-family:monospace; letter-spacing:1px; color:#f43f5e; font-weight:600; text-transform:uppercase;">
-                    Deletion Curve <span
-                      style="color:#64748b; font-weight:400; text-transform:none; margin-left:2px;">(lower = more
-                      faithful)</span>
-                  </div>
-                </div>
-                <div style="display:flex; gap:12px; font-size:0.55em; color:#cbd5e1;">
-                  <span style="display:flex; align-items:center; gap:4px;">
-                    <span
-                      style="width:12px; height:3px; background:#f43f5e; border-radius:1px; display:inline-block;"></span>
-                    SHAP Order
-                  </span>
-                  <span style="display:flex; align-items:center; gap:4px; color:#94a3b8;">
-                    <span
-                      style="width:12px; height:0; border-top:2px dashed rgba(148,163,184,0.5); display:inline-block;"></span>
-                    Random Order
-                  </span>
-                </div>
-                <div style="position:relative; height:220px; width:100%;">
-                  <canvas id="del-curve"></canvas>
-                </div>
-                <div
-                  style="font-size:0.52em; color:#64748b; font-family:monospace; text-align:center; letter-spacing:0.3px;">
-                  Fraction of items removed
-                </div>
-              </div>
+              
 
               <div
                 style="background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.04); border-radius:10px; padding:14px; display:flex; flex-direction:column; gap:10px;">
@@ -5051,7 +5994,36 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
                   Fraction of items added
                 </div>
               </div>
-
+<div
+                style="background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.04); border-radius:10px; padding:14px; display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div
+                    style="font-size:0.62em; font-family:monospace; letter-spacing:1px; color:#f43f5e; font-weight:600; text-transform:uppercase;">
+                    Deletion Curve <span
+                      style="color:#64748b; font-weight:400; text-transform:none; margin-left:2px;">(lower = more
+                      faithful)</span>
+                  </div>
+                </div>
+                <div style="display:flex; gap:12px; font-size:0.55em; color:#cbd5e1;">
+                  <span style="display:flex; align-items:center; gap:4px;">
+                    <span
+                      style="width:12px; height:3px; background:#f43f5e; border-radius:1px; display:inline-block;"></span>
+                    SHAP Order
+                  </span>
+                  <span style="display:flex; align-items:center; gap:4px; color:#94a3b8;">
+                    <span
+                      style="width:12px; height:0; border-top:2px dashed rgba(148,163,184,0.5); display:inline-block;"></span>
+                    Random Order
+                  </span>
+                </div>
+                <div style="position:relative; height:220px; width:100%;">
+                  <canvas id="del-curve"></canvas>
+                </div>
+                <div
+                  style="font-size:0.52em; color:#64748b; font-family:monospace; text-align:center; letter-spacing:0.3px;">
+                  Fraction of items removed
+                </div>
+              </div>
             </div>
 
             <div class="glass fragment fade-up" data-fragment-index="2"
@@ -5064,7 +6036,7 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
                 style="font-size:0.58em; color:#e2e8f0; line-height:1.45; border-left:1px solid rgba(255,255,255,0.08); padding-left:16px;">
                 <strong style="color:#ffffff; font-weight:600;">Spearman Rank Correlation:</strong> GradientSHAP
                 attribution scores and sequential attention weight matrices are closely aligned across evaluated pairs
-                ($N = 500$), verifying uniform mapping consistency.
+                (N = 500), verifying uniform mapping consistency.
               </div>
             </div>
 
@@ -5326,13 +6298,12 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
         { num: "05", label: "Components" },
         { num: "06", label: "Explainability" },
         { num: "07", label: "Dataset & Setup" },
-        { num: "08", label: "Training" },
-        { num: "09", label: "Results" },
-        { num: "10", label: "Ablation Study" },
-        { num: "11", label: "XAI Evaluation" },
-        { num: "12", label: "Strengths & Limits" },
-        { num: "13", label: "Future Work" },
-        { num: "14", label: "Conclusion" },
+        { num: "08", label: "Training & Results" },
+        { num: "09", label: "Ablation Study" },
+        { num: "10", label: "XAI Evaluation" },
+        { num: "11", label: "Strengths & Limits" },
+        { num: "12", label: "Future Work" },
+        { num: "13", label: "Conclusion" },
       ];
 
       const SLIDE_CHAPTER = {
@@ -5354,12 +6325,14 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
         15: 6,
         16: 7,
         17: 8,
-        18: 9,
-        19: 10,
-        20: 11,
-        21: 12,
-        22: 13,
-        23: -1,
+        18: 8,
+19: 7,
+20: 8,   // Ablation Study
+21: 10,
+        22: 11,
+        23: 12,
+        24: 13,
+        25: -1,
       };
 
       function makeBadge(chapterIdx) {
@@ -5388,6 +6361,7 @@ SLIDE 22 — EXPLAINABILITY EVALUATION
 
       document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.reveal .slides > section').forEach((section, idx) => {
+          console.log("INDEX:", idx, section); 
           const inner = section.querySelector('.slide');
           if (!inner) return;
           const chIdx = SLIDE_CHAPTER[idx] !== undefined ? SLIDE_CHAPTER[idx] : -1;
